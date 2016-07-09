@@ -1,0 +1,5 @@
+.jekyll-metadata
+node_modules
+Gemfile.lock
+commit-hook.sh
+_site

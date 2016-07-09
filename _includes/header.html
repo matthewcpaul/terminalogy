@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang=en{% if page.class %} class="{{ page.class }}"{% endif %}>
+  <meta charset="utf-8"/>
+  <title>{{ page.title }} - {{ site.name }}</title>
+  <meta name="viewport" content="initial-scale=1" />
+  <meta name="p:domain_verify" content="73bb9724cf18cc4f5f5d8e8553eeb2ff"/>
+
+  <meta property="og:title" content="{{ page.title }}"/>
+  <meta property="og:site_name" content="{{ site.name }}"/>
+  <meta property="og:description" content="{{ site.description | strip_html }}"/>
+  <meta property="og:url" content="{{ page.url }}"/>
+
+  <link href="/assets/css/style.css" rel="stylesheet" type="text/css">
+
+  <link rel="shortcut icon" href="images/2016/07/eye.png"/>
+
+  <body>
+    <header role="banner">
+      <nav role="navigation">
+        <a href="/">{{ site.name }}</a>
+      </nav>
+      {% include nav.html %}
+    </header>
