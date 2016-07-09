@@ -9,6 +9,10 @@
   },
   "author": "Matthew C. Paul",
   "license": "ISC",
+  "scripts": {
+      "start": "gulp",
+      "postinstall": "bundle install"
+  },
   "devDependencies": {
     "browser-sync": "^2.11.1",
     "gulp": "^3.9.1",
