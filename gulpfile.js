@@ -40,6 +40,7 @@ gulp.task('jekyll-build', shell.task(['bundle exec jekyll build --incremental --
 gulp.task('jekyll-serve', function() {
   browserSync.init({ server: { baseDir: '_site/' } });
   gulp.watch('./_assets/styles/**/*.scss', ['styles']);
+  gulp.watch('**/*.md', ['jekyll-build'],  browserSync.reload);
   gulp.watch('_site/**/*.*').on('change', browserSync.reload);
 });
 
