@@ -2,7 +2,8 @@
 
 name: "Terminalogy"
 description: A list of commonly used commands and aliases for your terminal.
-url: https://matthewcpaul.github.io/terminalogy/
+baseurl: "/terminalogy"
+url: https://matthewcpaul.github.io/terminalogy
 
 # Build Settings
 
