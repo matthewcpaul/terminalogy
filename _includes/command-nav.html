@@ -1,0 +1,16 @@
+<nav>
+    <ul>
+        {% for app in site.commands %}
+            <li>
+                <a href="#{{app.title}}">{{app.title}}</a>
+                <ul>
+                    {% for type in app.commands %}
+                        <li>
+                            <a href="#{{app.title}}-{{type.title}}">{{type.title}}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+</nav>
