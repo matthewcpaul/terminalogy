@@ -1,52 +1,359 @@
 <!DOCTYPE html>
 <html lang=en>
-  <meta charset="utf-8"/>
-  <title>Index - Terminalogy</title>
-  <meta name="viewport" content="initial-scale=1" />
-  <meta name="p:domain_verify" content="73bb9724cf18cc4f5f5d8e8553eeb2ff"/>
+	<meta charset="utf-8"/>
+	<title>Index - Terminalogy</title>
+	<meta name="viewport" content="initial-scale=1" />
+	<meta name="p:domain_verify" content="73bb9724cf18cc4f5f5d8e8553eeb2ff"/>
 
-  <meta property="og:title" content="Index"/>
-  <meta property="og:site_name" content="Terminalogy"/>
-  <meta property="og:description" content="A list of commonly used commands and aliases for your terminal."/>
-  <meta property="og:url" content="/"/>
+	<meta property="og:title" content="Index"/>
+	<meta property="og:site_name" content="Terminalogy"/>
+	<meta property="og:description" content="A list of commonly used commands and aliases for your terminal."/>
+	<meta property="og:url" content="/"/>
 
-  <link href="/assets/css/style.css" rel="stylesheet" type="text/css">
-
-  <link rel="shortcut icon" href=""/>
-
-  <body>
-    <header role="banner">
-      <nav role="navigation">
-        <a href="/">Terminalogy</a>
-      </nav>
-      <nav role="navigation">
+	<link href="/assets/css/style.css" rel="stylesheet" type="text/css">
+	
+	<link rel="shortcut icon" href=""/>
+	
+	<body>
+		<header class="u-pv-xs" role="banner">
+			<div class="o-wrap">
+				<nav role="navigation">
+					<a href="/">Terminalogy</a>
+				</nav>
+				<nav role="navigation">
 	<ul>
 	  
 	  
 	    
 	  
 	    
-	      <li><a class="active" href="/">Index</a></li>
-	    
 	  
 	</ul>
 </nav>
 
-    </header>
+			</div>
+		</header>
 
 
   <main class="" role="main">
 
-    <div class="">
-      <h1 id="terminalogy">Terminalogy</h1>
+    <div class="o-wrap">
+      <title>Terminalogy</title>
+
+<aside>
+    <nav>
+    <ul>
+        
+            <li>
+                <a href="#File management">File management</a>
+                <ul>
+                    
+                        <li>
+                            <a href="#File management-Navigation">Navigation</a>
+                        </li>
+                    
+                        <li>
+                            <a href="#File management-Edit Files">Edit Files</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+            <li>
+                <a href="#Git(hub)">Git(hub)</a>
+                <ul>
+                    
+                        <li>
+                            <a href="#Git(hub)-Configure Tooling">Configure Tooling</a>
+                        </li>
+                    
+                        <li>
+                            <a href="#Git(hub)-Create Repositories">Create Repositories</a>
+                        </li>
+                    
+                        <li>
+                            <a href="#Git(hub)-Make Changes">Make Changes</a>
+                        </li>
+                    
+                        <li>
+                            <a href="#Git(hub)-Group Changes">Group Changes</a>
+                        </li>
+                    
+                        <li>
+                            <a href="#Git(hub)-Save Fragments">Save Fragments</a>
+                        </li>
+                    
+                        <li>
+                            <a href="#Git(hub)-Review History">Review History</a>
+                        </li>
+                    
+                        <li>
+                            <a href="#Git(hub)-Redo commits">Redo commits</a>
+                        </li>
+                    
+                        <li>
+                            <a href="#Git(hub)-Synchronize changes">Synchronize changes</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+    </ul>
+</nav>
+
+</aside>
+
+
+    <section id="File management">
+        <h3>File management</h3>
+        
+            <h4 id="File management-Navigation">Navigation</h4>
+            <p>Navigate folder structure</p>
+            <ul>
+                
+                <li>
+                    <h4> ls</h4>
+                    <p>Installs and updates project dependencies</p>
+                </li>
+                
+            </ul>
+        
+            <h4 id="File management-Edit Files">Edit Files</h4>
+            <p>Navigate folder structure</p>
+            <ul>
+                
+                <li>
+                    <h4> cp -rf [folder name] [new folder name]</h4>
+                    <p>Copy folder</p>
+                </li>
+                
+                <li>
+                    <h4> cp [file name] [new file name]</h4>
+                    <p>Copy file</p>
+                </li>
+                
+                <li>
+                    <h4> mv -rf [folder name] [destination]</h4>
+                    <p>Move folder, can also be used to rename a folder</p>
+                </li>
+                
+                <li>
+                    <h4> mv [file name] [new file name]</h4>
+                    <p>Rename a file</p>
+                </li>
+                
+            </ul>
+        
+    </section>
+
+    <section id="Git(hub)">
+        <h3>Git(hub)</h3>
+        
+            <h4 id="Git(hub)-Configure Tooling">Configure Tooling</h4>
+            <p>Configure user information for all local repositories</p>
+            <ul>
+                
+                <li>
+                    <h4>git config --global user.name "[name]"</h4>
+                    <p>Sets the name you want attached to your commit transactions</p>
+                </li>
+                
+                <li>
+                    <h4>git config --global user.email "[email address]"</h4>
+                    <p>Sets the email you want attached to your commit transactions</p>
+                </li>
+                
+                <li>
+                    <h4>git config --global color.ui auto</h4>
+                    <p>Enables helpful colorization of command line output</p>
+                </li>
+                
+            </ul>
+        
+            <h4 id="Git(hub)-Create Repositories">Create Repositories</h4>
+            <p>Stat a new repository or obtain one from an existing URL</p>
+            <ul>
+                
+                <li>
+                    <h4>git init [project-name]</h4>
+                    <p>Creates a new local repository with the specified name</p>
+                </li>
+                
+                <li>
+                    <h4>git clone [url]</h4>
+                    <p>Downloads a project and its entire version history</p>
+                </li>
+                
+            </ul>
+        
+            <h4 id="Git(hub)-Make Changes">Make Changes</h4>
+            <p>Review edits and craft a commit transaction</p>
+            <ul>
+                
+                <li>
+                    <h4>git status</h4>
+                    <p>Lists all new or modified files to be committed</p>
+                </li>
+                
+                <li>
+                    <h4>git diff</h4>
+                    <p>Shows file differences not yet staged</p>
+                </li>
+                
+                <li>
+                    <h4>git add [file]</h4>
+                    <p>Snapshots the file in preparation for versioning</p>
+                </li>
+                
+                <li>
+                    <h4>git diff --staged</h4>
+                    <p>Shows file differences between staging and the file version</p>
+                </li>
+                
+                <li>
+                    <h4>git reset [file]</h4>
+                    <p>Unstages the file, but preserves its contents</p>
+                </li>
+                
+                <li>
+                    <h4>git commit -m"[descriptive message]</h4>
+                    <p>Records file snapshots permanently in version history</p>
+                </li>
+                
+            </ul>
+        
+            <h4 id="Git(hub)-Group Changes">Group Changes</h4>
+            <p>Name a series of commits and combine completed efforts</p>
+            <ul>
+                
+                <li>
+                    <h4>git branch</h4>
+                    <p>Lists all local branches in the current repository</p>
+                </li>
+                
+                <li>
+                    <h4>git branch [branch-name]</h4>
+                    <p>Creates a new branch</p>
+                </li>
+                
+                <li>
+                    <h4>git checkout [branch-name]</h4>
+                    <p>Switches to the specified branch and updates the working directory</p>
+                </li>
+                
+                <li>
+                    <h4>git merge [branch]</h4>
+                    <p>Combines the specified branch's history into the current branch</p>
+                </li>
+                
+                <li>
+                    <h4>git branch -d [branch-name]</h4>
+                    <p>Deletes the specified branch</p>
+                </li>
+                
+            </ul>
+        
+            <h4 id="Git(hub)-Save Fragments">Save Fragments</h4>
+            <p>Shelve and restore incomplete changes</p>
+            <ul>
+                
+                <li>
+                    <h4>git stash</h4>
+                    <p>Temporarily stores all modified tracked files</p>
+                </li>
+                
+                <li>
+                    <h4>git stash pop</h4>
+                    <p>Restores the most recently stashed files</p>
+                </li>
+                
+                <li>
+                    <h4>git stash list</h4>
+                    <p>Lists all stashed changessets</p>
+                </li>
+                
+                <li>
+                    <h4>git stash drop</h4>
+                    <p>Discards the most recently stashed changeset</p>
+                </li>
+                
+            </ul>
+        
+            <h4 id="Git(hub)-Review History">Review History</h4>
+            <p>Browse and inspect the evolution of project files</p>
+            <ul>
+                
+                <li>
+                    <h4>git log</h4>
+                    <p>Lists version history for the current branch</p>
+                </li>
+                
+                <li>
+                    <h4>git log --follow</h4>
+                    <p>Lists version history for a file, including butts</p>
+                </li>
+                
+                <li>
+                    <h4>git log --follow</h4>
+                    <p>Lists version history for a file, including renames</p>
+                </li>
+                
+                <li>
+                    <h4>git diff [first-branch]...[second-branch]</h4>
+                    <p>Shows content differences between two branches</p>
+                </li>
+                
+                <li>
+                    <h4>git show [commit]</h4>
+                    <p>Outputs metadata and content changes of the specified commit</p>
+                </li>
+                
+            </ul>
+        
+            <h4 id="Git(hub)-Redo commits">Redo commits</h4>
+            <p>Erase mistakes and craft replacement history</p>
+            <ul>
+                
+                <li>
+                    <h4>git reset [commit]</h4>
+                    <p>Undoes all commits after [commit], preserving changes locally</p>
+                </li>
+                
+                <li>
+                    <h4>git reset --hard [commit]</h4>
+                    <p>Discards all history and changes back to the specified commit</p>
+                </li>
+                
+            </ul>
+        
+            <h4 id="Git(hub)-Synchronize changes">Synchronize changes</h4>
+            <p>Register a repository bookmark and exchange version history</p>
+            <ul>
+                
+                <li>
+                    <h4>git fetch [bookmark]</h4>
+                    <p>Undoes all commits after [commit], preserving changes locally</p>
+                </li>
+                
+                <li>
+                    <h4>git reset --hard [commit]</h4>
+                    <p>Discards all history and changes back to the specified commit</p>
+                </li>
+                
+            </ul>
+        
+    </section>
+
 
     </div>
 
   </main>
 
-  <footer class="" role="contentinfo">
-    <p>&copy; 2016 Terminalogy</p>
-  </footer>
+	<footer class="" role="contentinfo">
+		<div class="o-wrap">
+			<p>&copy; 2016 Terminalogy</p>
+		</div>
+	</footer>
 </body>
 
 </html>
