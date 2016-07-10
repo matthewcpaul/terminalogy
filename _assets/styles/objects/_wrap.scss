@@ -1,0 +1,13 @@
+// Global namespace for wrapper object
+$wrap-namespace: "o-wrap" !default;
+
+// Global width for wrapper
+$wrap-width: 65rem !default;
+
+// Create a wrapper element with a max-width
+.#{$wrap-namespace} {
+    display: block;
+    max-width: $wrap-width;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
