@@ -1,5 +1,5 @@
 ---
-title: GitHub
+title: Git
 primary: git
 commands:
     # Configure Tooling

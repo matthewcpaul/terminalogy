@@ -53,7 +53,7 @@ gulp.task('serve', ['styles', 'local-build'], function() {
 });
 
 // Gulp: Run styles, local-build, and serve
-gulp.task('default', ['styles', 'local-build', 'serve']);
+gulp.task('default', ['serve']);
 
 // Build with only jekyll config and then deploy to gh-pages
 gulp.task('jekyll-build', shell.task(['bundle exec jekyll build']));
