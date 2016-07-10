@@ -41,7 +41,7 @@ gulp.task('jekyll-build', shell.task(['bundle exec jekyll build --config _config
 gulp.task('jekyll-serve', function() {
   browserSync.init({ server: { baseDir: '_site/' } });
   gulp.watch('./_assets/styles/**/*.scss', ['styles']);
-  gulp.watch('**/*.md', ['jekyll-build'],  browserSync.reload);
+  gulp.watch('**/*.md', ['jekyll-build']);
   gulp.watch('_site/**/*.*').on('change', browserSync.reload);
 });
 

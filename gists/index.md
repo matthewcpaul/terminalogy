@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Aliases
+title: Gists
 nav-item: true
 order: 2
 ---
 
-# Aliases
+# Gists

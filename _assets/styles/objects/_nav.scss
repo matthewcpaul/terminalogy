@@ -4,10 +4,15 @@ $nav-namespace: "o-nav" !default;
 .#{$nav-namespace} {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 
 	&__mark {
-		text-decoration: none;
+		font-family: "Space Mono", monospace;
+		font-size: 1.25rem;
+		font-weight: 400;
+		font-feature-settings: "liga" 0;
 		color: $white;
+		text-decoration: none;
 	}
 
 	&__list {
@@ -21,16 +26,16 @@ $nav-namespace: "o-nav" !default;
 	}
 
 	&__link {
-		text-decoration: none;
-		padding-bottom: 1.25rem;
 		color: $white;
+		text-decoration: none;
+		padding-bottom: 1.125rem;
 
 		&.active {
-			border-bottom: 3px solid $white;
+			border-bottom: 4px solid $white;
 		}
 
 		&:hover {
-			border-bottom: 3px solid $white-transparent;
+			border-bottom: 4px solid $white-transparent;
 
 			&.active {
 				border-color: $white;
