@@ -26,6 +26,8 @@ assets:
     - "_assets/css"
     - "images"
 
+# Read and Output Collections
+
 collections:
-    commands:
-        output: false
+  commands:
+    output: false
