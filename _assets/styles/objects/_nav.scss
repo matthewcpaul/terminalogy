@@ -1,0 +1,30 @@
+// Global namespace for nav object
+$nav-namespace: "o-nav" !default;
+
+.#{$nav-namespace} {
+	display: flex;
+	justify-content: space-between;
+
+	&__mark {
+		color: $white;
+	}
+
+	&__list {
+		margin: 0;
+
+		&-item {
+			display: inline-block;
+			list-style-type: none;
+			padding-left: 2rem;
+
+			& a {
+				color: $white;
+				padding-bottom: 1.25rem;
+
+				&.active {
+					border-bottom: 3px solid $white;
+				}
+			}
+		}
+	}
+}

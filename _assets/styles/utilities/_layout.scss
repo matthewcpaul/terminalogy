@@ -2,7 +2,7 @@
 $spacing-sizes: (
 	'xxs': .5,
 	'xs': 1,
-	'sm': 2,
+	'sm': 2.5,
 	'md': 3,
 	'lg': 4,
 	'xl': 6,
@@ -30,11 +30,11 @@ $spacing-edges: (
 @each $size, $scale in $spacing-sizes {
 
 	.u-p-#{$size} {
-		padding: round($spacing-unit * $scale) !important;
+		padding: ($spacing-unit * $scale) !important;
 	}
 
 	.u-m-#{$size} {
-		margin: round($spacing-unit * $scale) !important;
+		margin: ($spacing-unit * $scale) !important;
 	}
 
 	@each $edge, $sub in $spacing-edges {
@@ -42,10 +42,10 @@ $spacing-edges: (
 		.u-p#{str-slice($edge, 1, 1)}-#{$size} {
 			@if $sub {
 				@each $subedge in $sub {
-					padding-#{$subedge}: round($spacing-unit * $scale) !important;
+					padding-#{$subedge}: ($spacing-unit * $scale) !important;
 				}
 			} @else {
-				padding-#{$edge}: round($spacing-unit * $scale) !important;
+				padding-#{$edge}: ($spacing-unit * $scale) !important;
 			}
 		}
 
@@ -53,10 +53,10 @@ $spacing-edges: (
 		.u-m#{str-slice($edge, 1, 1)}-#{$size} {
 			@if $sub {
 				@each $subedge in $sub {
-					margin-#{$subedge}: round($spacing-unit * $scale) !important;
+					margin-#{$subedge}: ($spacing-unit * $scale) !important;
 				}
 			} @else {
-				margin-#{$edge}: round($spacing-unit * $scale) !important;
+				margin-#{$edge}: ($spacing-unit * $scale) !important;
 			}
 		}
 	}

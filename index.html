@@ -1,29 +1,29 @@
 ---
 layout: default
-title: Index
-nav-item:
+title: Commands
+nav-item: true
+order: 1
 ---
 
-<title>Terminalogy</title>
-
-<aside>
+<aside class="o-aside">
     {% include command-nav.html %}
 </aside>
-
-{% for app in site.commands %}
-    <section id="{{app.title}}">
-        <h3>{{app.title}}</h3>
-        {% for type in app.commands %}
-            <h4 id="{{app.title}}-{{type.title}}">{{type.title}}</h4>
-            <p>{{type.des}}</p>
-            <ul>
-                {% for command in type.commands %}
-                <li>
-                    <h4>{{app.primary}} {{command.cmd}}</h4>
-                    <p>{{command.des}}</p>
-                </li>
-                {% endfor %}
-            </ul>
-        {% endfor %}
-    </section>
-{% endfor %}
+<article class="o-article">
+    {% for app in site.commands %}
+        <section id="{{app.title}}">
+            <h2>{{app.title}}</h2>
+            {% for type in app.commands %}
+                <h3 id="{{app.title}}-{{type.title}}">{{type.title}}</h3>
+                <p>{{type.des}}</p>
+                <ul>
+                    {% for command in type.commands %}
+                    <li>
+                        <h4>{{app.primary}} {{command.cmd}}</h4>
+                        <p>{{command.des}}</p>
+                    </li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+        </section>
+    {% endfor %}
+</article>

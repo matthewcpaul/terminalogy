@@ -15,11 +15,11 @@
 	<link rel="shortcut icon" href=""/>
 	
 	<body>
-		<header class="u-pv-xs" role="banner">
+		<header class="o-header u-pv-sm" role="banner">
 			<div class="o-wrap">
-				<nav role="navigation">
-					<a href="/">{{ site.name }}</a>
+				<nav class="o-nav" role="navigation">
+					<a class="o-nav__mark u-link-reset" href="/">{{ site.name }}</a>
+					{% include nav.html %}
 				</nav>
-				{% include nav.html %}
 			</div>
 		</header>
