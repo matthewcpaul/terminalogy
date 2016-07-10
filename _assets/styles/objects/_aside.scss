@@ -1,0 +1,6 @@
+// Global namespace for aside object
+$aside-namespace: "o-aside" !default;
+
+.#{$aside-namespace} {
+    position: fixed;
+}

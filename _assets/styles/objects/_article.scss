@@ -1,0 +1,15 @@
+// Global namespace for article object
+$article-namespace: "o-article" !default;
+
+// Global width for article
+$article-width: 75% !default;
+
+// Global width for fixed aside
+$aside-width: 25% !default;
+
+.#{$article-namespace} {
+    display: inline-block;
+    width: $article-width;
+    margin-left: $aside-width;
+    padding-left: 2rem;
+}

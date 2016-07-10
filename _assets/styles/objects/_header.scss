@@ -1,0 +1,14 @@
+// Global namespace for header object
+$header-namespace: "o-header" !default;
+
+// Global width for header
+$header-width: 100% !default;
+
+.#{$header-namespace} {
+    background-color: $gray-dark;
+	
+	width: $header-width;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
