@@ -1,8 +1,10 @@
 <ul class="o-nav__list">
-  {% assign pages = site.pages | sort:"order" %}
-  {% for p in pages %}
-    {% if p.nav-item == true %}
-      <li class="o-nav__list-item" ><a {% if p.url == page.url %}class="u-link-reset active"{% else %}class="u-link-reset"{% endif %} href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a></li>
-    {% endif %}
-  {% endfor %}
+	{% assign pages = site.pages | sort:"order" %}
+	{% for p in pages %}
+		{% if p.nav-item == true %}
+			<li class="o-nav__list-item" >
+				<a {% if p.url == page.url %}class="u-link-reset active"{% else %}class="u-link-reset"{% endif %} href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a>
+			</li>
+		{% endif %}
+	{% endfor %}
 </ul>
