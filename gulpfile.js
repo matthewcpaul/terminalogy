@@ -28,6 +28,7 @@ var processors = [
   })
 ];
 
+// Styles, build incrementally with local config, serve and watch for changes
 gulp.task('styles', function() {
   return gulp.src('./_assets/styles/style.scss')
   .pipe(sass())
@@ -46,12 +47,12 @@ gulp.task('jekyll-serve', function() {
 
 gulp.task('default', ['styles', 'jekyll-build', 'jekyll-serve']);
 
-// Push build to gh-pages
+// Build with Jekyll config and then deploy to gh-pages
 gulp.task('jekyll-build-gh-pages', shell.task(['bundle exec jekyll build']));
 
-gulp.task('deploy-gh-pages', function () {
+gulp.task('deploy-gh-pages', ['jekyll-build-gh-pages'], function () {
   return gulp.src("./_site/**/*")
     .pipe(deploy())
 });
 
-gulp.task('deploy', ['jekyll-build-gh-pages', 'deploy-gh-pages']);
+gulp.task('deploy', ['deploy-gh-pages']);
