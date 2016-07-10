@@ -47,7 +47,11 @@ gulp.task('jekyll-serve', function() {
 gulp.task('default', ['styles', 'jekyll-build', 'jekyll-serve']);
 
 // Push build to gh-pages
-gulp.task('deploy', function () {
+gulp.task('jekyll-build-gh-pages', shell.task(['bundle exec jekyll build']));
+
+gulp.task('deploy-gh-pages', function () {
   return gulp.src("./_site/**/*")
     .pipe(deploy())
 });
+
+gulp.task('deploy', ['jekyll-build-gh-pages', 'deploy-gh-pages']);
