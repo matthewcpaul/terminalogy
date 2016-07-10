@@ -28,30 +28,38 @@ var processors = [
   })
 ];
 
-// Styles, build incrementally with local config, serve and watch for changes
+// Compile SCSS into CSS & auto-inject into browsers
 gulp.task('styles', function() {
   return gulp.src('./_assets/styles/style.scss')
   .pipe(sass())
   .pipe(nano({discardComments: {removeAll: true}}))
-  .pipe(gulp.dest('./_site/assets/css'));
+  .pipe(gulp.dest('./_site/assets/css'))
+  .pipe(browserSync.stream());
 });
 
-gulp.task('jekyll-build', shell.task(['bundle exec jekyll build --config _config.yml,local_config.yml --incremental --watch']));
+// Build incrementally with jekyl config + local config
+gulp.task('local-build', shell.task(['bundle exec jekyll build --config _config.yml,local_config.yml']));
 
-gulp.task('jekyll-serve', function() {
-  browserSync.init({ server: { baseDir: '_site/' } });
-  gulp.watch('./_assets/styles/**/*.scss', ['styles']);
-  gulp.watch('**/*.md', ['jekyll-build']);
-  gulp.watch('_site/**/*.*').on('change', browserSync.reload);
+// Static Server + watching scss/html files
+gulp.task('serve', ['styles', 'local-build'], function() {
+
+    browserSync.init({
+        server: { baseDir: '_site/' }
+    });
+
+    gulp.watch('_assets/styles/**/*.scss', ['styles']);
+    gulp.watch('_commands/*.md', ['local-build']);
+    gulp.watch('_site/**/*.*').on('change', browserSync.reload);
 });
 
-gulp.task('default', ['styles', 'jekyll-build', 'jekyll-serve']);
+// Gulp: Run styles, local-build, and serve
+gulp.task('default', ['styles', 'local-build', 'serve']);
 
-// Build with Jekyll config and then deploy to gh-pages
-gulp.task('jekyll-build-gh-pages', shell.task(['bundle exec jekyll build']));
+// Build with only jekyll config and then deploy to gh-pages
+gulp.task('jekyll-build', shell.task(['bundle exec jekyll build']));
 
-gulp.task('deploy-gh-pages', ['jekyll-build-gh-pages'], function () {
-  return gulp.src("./_site/**/*")
+gulp.task('deploy-gh-pages', ['jekyll-build'], function () {
+  return gulp.src('./_site/**/*')
     .pipe(deploy())
 });
 
