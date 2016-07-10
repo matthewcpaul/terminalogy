@@ -1,5 +1,5 @@
 ---
-title: Git(hub)
+title: Git
 primary: git
 commands:
     # Configure Tooling
