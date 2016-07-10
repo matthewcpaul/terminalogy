@@ -1,5 +1,6 @@
 # Logging
 .jekyll-metadata
+.publish
 *.log
 commit-hook.sh
 
