@@ -6,6 +6,7 @@ $nav-namespace: "o-nav" !default;
 	justify-content: space-between;
 
 	&__mark {
+		text-decoration: none;
 		color: $white;
 	}
 
@@ -16,14 +17,23 @@ $nav-namespace: "o-nav" !default;
 			display: inline-block;
 			list-style-type: none;
 			padding-left: 2rem;
+		}
+	}
 
-			& a {
-				color: $white;
-				padding-bottom: 1.25rem;
+	&__link {
+		text-decoration: none;
+		padding-bottom: 1.25rem;
+		color: $white;
 
-				&.active {
-					border-bottom: 3px solid $white;
-				}
+		&.active {
+			border-bottom: 3px solid $white;
+		}
+
+		&:hover {
+			border-bottom: 3px solid $white-transparent;
+
+			&.active {
+				border-color: $white;
 			}
 		}
 	}

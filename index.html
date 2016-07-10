@@ -18,7 +18,7 @@ order: 1
                 <ul>
                     {% for command in type.commands %}
                     <li>
-                        <h4>{{app.primary}} {{command.cmd}}</h4>
+                        <code class="code">{{app.primary}} {{command.cmd}}</code>
                         <p>{{command.des}}</p>
                     </li>
                     {% endfor %}
