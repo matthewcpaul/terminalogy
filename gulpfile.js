@@ -35,7 +35,7 @@ gulp.task('styles', function() {
   .pipe(gulp.dest('./_site/assets/css'));
 });
 
-gulp.task('jekyll-build', shell.task(['bundle exec jekyll build --incremental --watch']));
+gulp.task('jekyll-build', shell.task(['bundle exec jekyll build --config _config.yml,local_config.yml --incremental --watch']));
 
 gulp.task('jekyll-serve', function() {
   browserSync.init({ server: { baseDir: '_site/' } });
