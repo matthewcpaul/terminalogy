@@ -22,4 +22,14 @@ h3 {
 	&:before {
 		content: "$ ";
 	}
+
+	&::selection {
+  		background: $green;
+		color: $white;
+	}
+}
+
+::selection {
+  background: $gray-dark;
+  color: $white;
 }
