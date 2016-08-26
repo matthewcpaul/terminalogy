@@ -11,6 +11,7 @@ var cp           = require('child_process');
 var browserSync  = require('browser-sync').create();
 var deploy       = require('gulp-gh-pages');
 
+var ignore = ['!_site', '!node_modules', '!.bundle', '!.publish']
 var processors = [
   atImport,
   cssnext({
@@ -48,7 +49,8 @@ gulp.task('serve', ['styles', 'local-build'], function() {
     });
 
     gulp.watch('_assets/styles/**/*.scss', ['styles']);
-    gulp.watch('_commands/*.md', ['local-build']);
+    gulp.watch(['**/*.md'].concat(ignore), ['local-build']);
+    gulp.watch(['**/*.html'].concat(ignore), ['local-build']);
     gulp.watch('_site/**/*.*').on('change', browserSync.reload);
 });
 
